@@ -47,16 +47,18 @@ def main():
             colour_to_replace = sys.argv[3]
 
         convert_path = os.popen('which convert').read().strip('\n')
-        print(convert_path)
 
-        for i in range(0, 60):
+        if not os.path.exists('./rainbowify_output'):
+            os.mkdir('./rainbowify_output')
+
+        for i in range(0, 64):
             iterator = ''
             if i < 10:
                 iterator = '0' + str(i)
             else:
                 iterator = str(i)
 
-            output_path = os.getcwd() + input_image.split('.')[-2] + '-converted-' + iterator + '.png'
+            output_path = os.getcwd() + '/rainbowify_output' + input_image.split('.')[-2] + '-converted-' + iterator + '.png'
 
             output_colour = calc_colour(i)
             print(output_colour)
