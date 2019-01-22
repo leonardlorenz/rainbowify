@@ -46,14 +46,20 @@ def main():
         if sys.argv[3]:
             colour_to_replace = sys.argv[3]
 
+        convert_path = os.popen('which convert').read().strip('\n')
+        print(convert_path)
+
         for i in range(0, 60):
-            output_path = os.getcwd() + input_image.split('.')[-2] + '-converted-' + str(i) + '.png'
+            iterator = ''
+            if i < 10:
+                iterator = '0' + str(i)
+            else:
+                iterator = str(i)
+
+            output_path = os.getcwd() + input_image.split('.')[-2] + '-converted-' + iterator + '.png'
 
             output_colour = calc_colour(i)
             print(output_colour)
-
-            convert_path = os.popen('which convert').read().strip('\n')
-            print(convert_path)
 
             subprocess.call([convert_path, input_image, '-fill', output_colour, '-fuzz', fuzz_factor, '-opaque', colour_to_replace, output_path])
     else:
