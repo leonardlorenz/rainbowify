@@ -11,3 +11,7 @@ the input image:
 The resulting files which can be easily converted to a gif with ffmpeg. (you can find the command in imgtogif.sh)
 
 ![demo](./output.gif)
+
+After converting it to a gif the image looks like this!
+
+![output](./metr1xx.gif)
