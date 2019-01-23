@@ -6,7 +6,7 @@ Give it an image, a colour to replace inside the image and a fuzz factor to make
 
 ## Synopsis
 
-./main.py <input file> <fuzzy factor> <colour to replace>
+./main.py \<input file\> \<fuzzy factor\> \<colour to replace\>
 
 The fuzzy factor defaults to 50000 but can be set per command line. I will add proper command line options later
 
