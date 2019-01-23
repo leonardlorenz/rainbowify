@@ -7,7 +7,7 @@ import math
 
 def help():
     print('Synopsis:')
-    print('./main.py <input image> <fuzz factor> <colour to replace> <output path>')
+    print('./main.py <input image> <fuzz factor> <colour to replace>')
 
 def add_zeroes(colour):
     if len(colour) < 2:
