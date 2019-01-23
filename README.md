@@ -4,14 +4,10 @@ Give it an image, a colour to replace inside the image and a fuzz factor to make
 
 ## Here's a demonstration:
 
-the input image:
+the input image on the left and the output files compiled together to a gif on the right:
 
-![input](./metr1xx.png)
+![input](./metr1xx.png) ![output](./metr1xx.gif)
 
 The resulting files which can be easily converted to a gif with ffmpeg. (you can find the command in imgtogif.sh)
 
 ![demo](./output.gif)
-
-After converting it to a gif the image looks like this!
-
-![output](./metr1xx.gif)
